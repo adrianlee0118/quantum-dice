@@ -1,0 +1,225 @@
+body {
+    font-family: Arial, sans-serif;
+    background: #fafafa;
+}
+
+h1 {
+    margin-left: 50px;
+    padding-bottom: 10px;
+    font-size: 40px;
+    line-height: 120%;
+}
+
+h2 {
+    margin-left: 50px;
+    font-size: 30px;
+    padding-top: 20px;
+}
+
+h3 {
+    margin-left: 50px;
+    margin-right: 450px;
+    font-size: 20px;
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+
+h5 {
+    margin-left: 50px;
+}
+
+ul{
+    padding-left: 70px;
+}
+
+ol {
+    padding-left: 70px;
+}
+
+.li {
+    padding-bottom: 20px;
+}
+
+.card {
+    margin-right: 400px;
+}
+
+.card ul {
+    padding-left: 80px;
+    padding-right: 30px;
+}
+
+/* make resume headings bold */
+.res_heading{
+    font-weight:550;
+}
+
+/* make proj headings bold */
+.proj_heading{
+    font-weight:550;
+}
+
+.proj_heading a:hover{
+    color: darkblue;
+}
+
+.quote{
+    font-style:italic; 
+    font-size: larger; 
+    color:#A9A9A9; 
+    margin-left: 70px
+}
+
+p {
+    font-family: Arial, sans-serif;
+    font-size: 17px;
+    line-height: 1.7em;
+    margin-left: 50px;
+    margin-right: 450px;
+    color: rgb(19, 18, 18);
+    text-align: justify;
+}
+
+.blog{
+    font-size: 20px;
+    margin-right: 50px;
+}
+
+/* p for main page */
+.mp {
+    margin-right: 730px;
+    font-size: 20px;
+    text-align: justify;
+}
+.mp2 {
+    font-size: 20px;
+    text-align: justify;
+}
+
+/* right-aligned date spans for info page */
+span.res_date {
+    float: right;
+}
+
+/* light-colored spans for company names on info page */
+.res_company{
+    font-size:smaller;
+    color:#A9A9A9;
+}
+
+.question{
+    text-align: justify;
+}
+
+a,
+a:hover,s
+a:focus {
+    color: inherit;
+    text-decoration: none;
+    transition: all 0.3s;
+}
+
+.navbar {
+    padding: 15px 10px;
+    background: #fff;
+    border: none;
+    border-radius: 0;
+    margin-bottom: 40px;
+    box-shadow: 1px 1px 3px rgba(0, 0, 0, 0.1);
+}
+
+.navbar-btn {
+    box-shadow: none;
+    outline: none !important;
+    border: none;
+}
+
+.line {
+    padding-left: 50px;
+    padding-right: 400px;
+    height: 5px;
+    border-bottom: 1px dashed #ddd;
+    margin: 40px 0;
+}
+
+.pline {
+    margin-left: 50px;
+    margin-right: 400px;
+    height: 5px;
+    border-bottom: 1px dashed #ddd;
+}
+
+.social-icon {
+    margin-top: 20px;
+    margin-left: 50px;
+    float: left;
+    border-bottom: 0px none #000;
+}
+
+.social-icon a:hover {
+    color: darkblue;
+}
+
+pre, code {
+    font-family: monospace, monospace;
+    padding-left: 50px;
+    padding-right: 450px;
+}
+
+pre {
+    overflow: auto;
+}
+
+pre > code {
+    display: block;
+    padding: 1rem;
+    word-wrap: normal;
+}
+
+/* div.img the block for setting images */
+.img {
+    height: 300px;
+    width: 600px;
+    margin-top: 20px;
+    margin-left: 50px;
+    margin-bottom: 50px;
+}
+
+/* image itself in blog posts */
+img {
+    height: inherit;
+    width: inherit;
+}
+
+/*profile picture on home page*/
+.prof {
+    width:270px;
+    height: 410px;
+    margin-left: 30px;
+    margin-right: 400px;
+    float: right;
+    padding: 2px;
+    border: solid black 1px;
+}
+
+ol.blog {
+    font-size: 20px;
+}
+
+ul.blog {
+    font-size: 20px;
+}
+
+#content {
+    width: calc(100% - 250px);
+    padding: 40px;
+    min-height: 100vh;
+    transition: all 0.3s;
+    position: absolute;
+    top: 0;
+    right: 0;
+}
+
+#content.active {
+    width: 100%;
+}

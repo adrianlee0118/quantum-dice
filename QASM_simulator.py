@@ -7,6 +7,7 @@ from qiskit.visualization import plot_histogram
 
 if __name__ == "__main__":
 
+    # Get the Quantum assembly language simulator from Aer at IBMQ
     simulator = Aer.get_backend('qasm_simulator')
 
     # Set up five quantum bits to be superpositioned and five classical bits for storing measurements
@@ -22,7 +23,7 @@ if __name__ == "__main__":
     # Set up measurements - store measurements from quantum register in classical register
     circuit.measure([0, 1, 2, 3, 4], [0, 1, 2, 3, 4])
 
-    # Collapse bits 4096 times, generates a random number between 0 and 31 (five bits, max is 2^5 = 32) over four thousand times
+    # Collapse bits 8192 times, generates a random number between 0 and 31 (five bits, max is 2^5 = 32) over eight thousand times
     shots = 8192
     job = execute(circuit,simulator,shots=shots,memory=True)
 

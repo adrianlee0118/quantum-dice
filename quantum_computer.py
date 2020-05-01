@@ -25,6 +25,7 @@ if __name__ == "__main__":
     # Set up measurements - store measurements from quantum register in classical register
     circuit.measure([0, 1, 2, 3, 4], [0, 1, 2, 3, 4])
 
+    # Collapse bits 8192 times, generates a random number between 0 and 31 (five bits, max is 2^5 = 32) over eight thousand times
     shots = 8192   # This is the maximum amount of shots you are allowed to take from an IBM Quantum Computer in one sitting
     job = execute(circuit,qcomp,shots=shots,memory=True)
     job_monitor(job)
