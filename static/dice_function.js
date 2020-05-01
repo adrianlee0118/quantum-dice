@@ -1,4 +1,3 @@
-var diceRolls = []
 var index = Math.floor(Math.random() * diceRolls.length); //start at a random place in the array
 var maxDiceRoll = 32
 
