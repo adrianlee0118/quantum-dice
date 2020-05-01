@@ -15,8 +15,9 @@ as uniform a distribution of all potential results as possible.
 
 ## Limitations
 The web application uses a previously generated sequence of 8192 random numbers between 1 and 32 to produce random numbers as requested
-by the user through a browser. If more than 8000 rolls are performed on the app in a single session or the same set of numbers is used too often, the 'randomness' of the results will be negated--the Python script(s) should be run every now and again with a new set of 8192 numbers input to the .js file to maintain the integrity of the dice roll's randomness (the QASM_simulator.py script at 8192 shots tends to produce a more uniform distribution of numbers than the quantum_computer.py script, so it's recommended that the former is used to re-populate the JavaScript array).
+by the user through a browser. If more than 8000 rolls are performed on the app in a single session or the same given array of numbers is used too many times, the 'randomness' of the results could be negated--the Python script(s) should be run every now and again with the new set of 8192 numbers produced copied to the array in the roller.js file to maintain the integrity of the dice roll's randomness (the QASM_simulator.py script at 8192 shots tends to produce a more uniform distribution of numbers by frequency than the quantum_computer.py script, so it's recommended that the former is used to periodically produce a replacement for the JavaScript array).
 
 ## Thanks to
 - IBM Quantum Computing for use of IBM Q remote systems and simulators
 - Roll20 for inspiration to seek out Quantum technologies for dice rolls
+- Abe Asfaw for his informative tutorials on using IBM Quantum computing
