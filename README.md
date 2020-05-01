@@ -12,6 +12,7 @@ as uniform a distribution of all potential results as possible.
 - Python3
 - Anaconda3
 - Qiskit
+- Jupyter Notebook (for graphical interface)
 
 ## Limitations
 The web application uses a previously generated sequence of 8192 random numbers between 1 and 32 to produce random numbers as requested
