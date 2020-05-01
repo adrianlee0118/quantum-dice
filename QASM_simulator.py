@@ -19,7 +19,7 @@ if __name__ == "__main__":
     circuit.h(3)
     circuit.h(4)
 
-    # Measure - store measurements from quantum register in classical register
+    # Set up measurements - store measurements from quantum register in classical register
     circuit.measure([0, 1, 2, 3, 4], [0, 1, 2, 3, 4])
 
     # Collapse bits 4096 times, generates a random number between 0 and 31 (five bits, max is 2^5 = 32) over four thousand times

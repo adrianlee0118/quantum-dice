@@ -3,11 +3,13 @@ from qiskit.compiler import transpile, assemble
 from qiskit.tools.jupyter import *
 from qiskit.visualization import *
 from qiskit.quantum_info import Pauli, state_fidelity, basis_state, process_fidelity
+from qiskit.tools.monitor import job_monitor
 
 if __name__ == "__main__":
 
-    provider = IBMQ.load_account()
-    backend = provider.get_backend('ibmq_5_yorktown')
+    IBMQ.load_account()
+    provider = IBMQ.get_provider('ibm-q')
+    qcomp = provider.get_backend('ibmq_16_melbourne')
 
     # Set up five quantum bits to be superpositioned and five classical bits for storing measurements
     circuit = QuantumCircuit(5,5)
@@ -19,11 +21,12 @@ if __name__ == "__main__":
     circuit.h(3)
     circuit.h(4)
 
-    # Measure - store measurements from quantum register in classical register
+    # Set up measurements - store measurements from quantum register in classical register
     circuit.measure([0, 1, 2, 3, 4], [0, 1, 2, 3, 4])
 
     shots = 1
-    job = execute(circuit,backend,shots=shots,memory=True)
+    job = execute(circuit,qcomp,shots=shots,memory=True)
+    job_monitor(job)
 
     result = job.result()
     memory = result.get_memory()
