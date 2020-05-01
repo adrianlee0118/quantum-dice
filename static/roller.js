@@ -14,14 +14,13 @@ function increaseIndex() { //go to the next number. If its the end of the array,
 var result = "---"
 var finalDiceSize = "---";
 
+// Make all die except the passed diceID faded
 function fadeDice(diceID) {
-  //get rid of the class first
   for (var i = 1; i <= 6; i++) {
       var item = document.getElementById(i);
       item.classList.remove("inactive");
   }
 
-  //add it back where appropriate
   for (var i = 1; i <= 6; i++) {
     if(i != diceID) {
       var item = document.getElementById(i);
@@ -30,25 +29,19 @@ function fadeDice(diceID) {
   }
 }
 
+//Get dice size from argument, set to the global variable
 function getDiceSize(diceSize) {
   finalDiceSize = diceSize;
   return finalDiceSize;
 }
 
+// When a dice button is clicked, fade all dice except for clicked dice, set dice size
 function rollDice(diceID, diceSize) {
   fadeDice(diceID);
   getDiceSize(diceSize);
 }
 
-function resetDice() {
-  for (var i = 1; i <= 6; i++) {
-      var item = document.getElementById(i);
-      item.classList.remove("inactive");
-  }
-  finalDiceSize = "---"
-  roll();
-}
-
+//Get the loader bar at the bottom of the screne to display answer after one second
 function load() {
   document.getElementById("result").style.display = "none";
   document.getElementById("loader").style.display = "block";
@@ -59,17 +52,17 @@ function load() {
   }, 1000);
 }
 
+//Retrieves parameters, increases index and retrieves value from pre-generated random sequence, calculates roll
 function roll() {
   load()
   if (Number.isNaN(result)) {
     result = "---";
   }
-
   if (finalDiceSize == "---") {
     result = "---";
   } else {
     increaseIndex();
-    var normalizedRoll = (diceCorpus[index] + 1)/maxDiceRoll //its the sequence thats random, not the number. normalize the sequence for use by any dice
+    var normalizedRoll = (diceRolls[index] + 1)/maxDiceRoll;
     result = Math.ceil(normalizedRoll * finalDiceSize);
   }
   document.getElementById("result").innerHTML = result;
