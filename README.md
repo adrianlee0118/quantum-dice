@@ -4,7 +4,20 @@ This is a (yet another) computer dice roll app that in addition to including dic
 1. Using remote quantum computers from IBM to generate a sequence of numbers that is ostensibly 'truely random' (you can do a cursory confirmation of this by virtue of the fact that knowing the underlying random number generation algorithm does not enable one to predict the sequence of numbers)
 2. Caching the sequence of numbers and using it to perform dice rolls, iteratively retrieving numbers and mathematically adjusting the result for different dice sizes.
 
+The app can be tried [here](https://www.adrianlee0118.com/projects/quantum_dice).
+
 Note: A maximum possible sample size (IBMQ's one-sitting maximum is 8,192 shots of a given analysis at the time of this writing) is used to reduce statistical error and ensure as uniform a frequency distribution of all potential results as possible. The full analysis can be found at the blog post [here](https://www.adrianlee0118.com/blog) (search for the heading "Randomness")
+
+## Usage
+1. Run Python scripts on desktop or in Jupyter notebook to produce random number sequences
+2. Paste random number sequences into dice_data.js
+3. Run Flask app to render HTML page and use the dice roller
+4. If the dice is rolled more than ~8000 times repeat steps 1 and 2
+
+## Directories
+- Home: Contains the independent Python scripts used to generate random numbers sequences on the Desktop (QASM_simulator.py, quantum_computer.py) and the sample flask app (app.py) that is used for test rendering of the web application
+- Templates: HTML file for the web application which can be rendered along with the javascript files
+- Static: Contains styles and javascript files to govern the appearance and behavior of the HTML page, assets/ also contains project clipart. The figures/ directory includes some analysis tools that were used to assess the validity of the number sequences produced
 
 ## Requirements
 - Python3
