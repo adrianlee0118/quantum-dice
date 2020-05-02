@@ -160,23 +160,29 @@ a:focus {
     color: darkblue;
 }
 
+form {
+    margin-left: 50px;
+}
+
 .dice-button {
+    border-radius: 50%;
     width: 200px;
     height: 100px;
     position: relative;
     float: left;
-    margin: 50px;
+    margin: 25px;
     background-image: linear-gradient(to right, blue, lightblue);
 }
 
 .dice-button-newline {
+    border-radius: 50%;
     clear: both; 
     width: 200px;
     height: 100px;
     position: relative;
     float: left; 
     display: block;
-    margin: 50px;
+    margin: 25px;
     background-image: linear-gradient(to right, blue, lightblue);
 }
 
@@ -190,12 +196,12 @@ a:focus {
 
 .dice-text {
     float: left;
-    margin: 20px;
+    margin: 40px;
     color: white;
 }
 
 .dice_button_row {
-    margin-left: 100px;
+    margin-left: 50px;
 }
 
 pre, code {
@@ -270,6 +276,22 @@ ol.blog {
 
 ul.blog {
     font-size: 20px;
+}
+
+#result1 {
+    font-size: 20px; 
+    margin-left: 50px; 
+    display:block;
+}
+
+#result2 {
+    font-size: 20px; 
+    margin-left: 50px;
+}
+
+#loader {
+    width: 150px; 
+    display: none;
 }
 
 #content {
