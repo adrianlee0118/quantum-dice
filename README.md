@@ -19,13 +19,6 @@ Note: A maximum possible sample size (IBMQ's one-sitting maximum is 8,192 shots 
 - Templates: HTML file for the web application which can be rendered along with the javascript files
 - Static: Contains styles and javascript files to govern the appearance and behavior of the HTML page, assets/ also contains project clipart. The figures/ directory includes some analysis tools that were used to assess the validity of the number sequences produced
 
-## Requirements
-- Python3
-- Anaconda3
-- Qiskit
-- Jupyter Notebook (for graphical interface)
-- Active internet connection (to use Quantum computers at IBM)
-
 ## Limitations
 The web application uses a previously generated sequence of 8,192 random numbers between 1 and 32 to produce random numbers as requested
 by the user through a browser. If more than 8000 rolls are performed on the app in a single session or the same given array of numbers is used too many times, the 'randomness' of the results could be negated--the Python script(s) should be run every now and again with the new set of 8192 numbers produced copied and used to replace the contents of the array in the dice_data.js file to avoid re-use of segments of the sequence and thereby maintain the integrity of the dice roll's randomness (the QASM_simulator.py script at 8,192 shots tends to produce a more uniform distribution of numbers by frequency than the quantum_computer.py script, so it's recommended that the former is used to periodically produce a replacement for the JavaScript array).
