@@ -20,18 +20,21 @@ function roll(dicesize) {
     res.push(normalizedRoll+bonus);
   }
   result1 = `You rolled a ${dicesize}-sided die ${times} times with a ${bonus} ${btype}`
-  result2 = 
+  result2 = `The results are ${res.toString()}`
   
-  document.getElementById("result1").innerHTML = result;
+  document.getElementById("result1").innerHTML = result1;
+  document.getElementById("result2").innerHTML = result2;
 }
 
 //Get the answer area to display a loading gif for 1 second before displaying the answer
 function load() {
   document.getElementById("result1").style.display = "none";
+  document.getElementById("result2").style.display = "none";
   document.getElementById("loader").style.display = "block";
 
   setTimeout(function() {
     document.getElementById("result1").style.display = "block";
+    document.getElementById("result2").style.display = "block";
     document.getElementById("loader").style.display = "none";
   }, 1000);
 }
