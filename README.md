@@ -11,6 +11,7 @@ Note: A maximum possible sample size (IBMQ's one-sitting maximum is 8,192 shots 
 - Anaconda3
 - Qiskit
 - Jupyter Notebook (for graphical interface)
+- Active internet connection (to use Quantum computers at IBM)
 
 ## Limitations
 The web application uses a previously generated sequence of 8,192 random numbers between 1 and 32 to produce random numbers as requested
