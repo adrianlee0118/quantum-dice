@@ -21,4 +21,4 @@ by the user through a browser. If more than 8000 rolls are performed on the app 
 - IBM Quantum Computing and the [IBM Quantum Experience](https://www.ibm.com/quantum-computing/technology/experience/?p1=Search&p4=p50385964705&p5=e&cm_mmc=Search_Google-_-1S_1S-_-WW_NA-_-ibm%20quantum%20computing_e&cm_mmca7=71700000061253574&cm_mmca8=aud-384354108630%3Akwd-318569543695&cm_mmca9=Cj0KCQjwka_1BRCPARIsAMlUmEpw0b-3l_R2TWhfp6AB7Ej5xVjozUbz1b0sIhK8LWD2izNsHxhSulcaAoX_EALw_wcB&cm_mmca10=427831691189&cm_mmca11=e&gclid=Cj0KCQjwka_1BRCPARIsAMlUmEpw0b-3l_R2TWhfp6AB7Ej5xVjozUbz1b0sIhK8LWD2izNsHxhSulcaAoX_EALw_wcB&gclsrc=aw.ds) for use of IBM Q remote systems and simulators
 - [Roll20](https://roll20.net/) for [inspiration](https://wiki.roll20.net/QuantumRoll) to seek out Quantum technologies for dice rolls and for their extensive [API](https://github.com/Roll20/roll20-api-scripts)
 - Abe Asfaw for his informative tutorials on using IBM Quantum computing
-- [This site](https://game-icons.net/tags/dice.html) for their dice icons
+- [Game Icons](https://game-icons.net/tags/dice.html) for their dice icons
