@@ -6,21 +6,30 @@ var result2 = "";
 //Retrieves parameters, increases index and retrieves value from pre-generated random sequence, calculates roll(s)
 function roll(dicesize) {
   load()
-  var times = document.getElementById("times").value;
-  var bonus = document.getElementById("bonus").value;
-  var btype = "bonus";
+  var times = parseInt(document.getElementById("times").value);
+  var timeword = "times";
+  var resword = "results, including adjustments, are";
+  if (times == 1){
+    timeword = "time";
+    resword = "result, including adjustments, is";
+  }
+  var bonus = parseInt(document.getElementById("bonus").value);
+  var bstr = `a bonus of +${bonus}`;
   if (bonus < 0){
-    btype = "handicap";
+    bstr = `a handicap of ${bonus}`;
+  } else if (bonus == 0){
+    bstr = "no bonus";
   }
 
   var res = [];
   for (i = 0; i < times; i++){
     increaseIndex();
-    var normalizedRoll = Math.ceil(((diceRolls[index] + 1)/maxDiceRoll)*dicesize);
+    var fract = (diceRolls[index]+1)/maxDiceRoll;
+    var normalizedRoll = Math.ceil(fract*dicesize);
     res.push(normalizedRoll+bonus);
   }
-  result1 = `You rolled a ${dicesize}-sided die ${times} times with a ${bonus} ${btype}`
-  result2 = `The results are ${res.toString()}`
+  result1 = `You rolled a ${dicesize}-sided die ${times} ${timeword} with ${bstr}`
+  result2 = `The ${resword} ${res.toString()}`
   
   document.getElementById("result1").innerHTML = result1;
   document.getElementById("result2").innerHTML = result2;

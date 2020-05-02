@@ -290,7 +290,8 @@ ul.blog {
 }
 
 #loader {
-    width: 150px; 
+    width: 150px;
+    margin-left: 50px; 
     display: none;
 }
 
