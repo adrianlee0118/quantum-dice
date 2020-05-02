@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+
+    <!-- Bootstrap CSS CDN -->
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css"
+      integrity="sha384-9gVQ4dYFwwWSjIDZnLEWnxCjeSWFphJiwGPXr1jddIhOegiu1FwO5qRGvFXOdJZ4"
+      crossorigin="anonymous"
+    />
+    <!-- Our Custom CSS and required JS files -->
+    <link
+      rel="stylesheet"
+      href="{{ url_for('static', filename='style.css') }}"
+    />
+    <script 
+      type="text/javascript" 
+      src="{{ url_for('static', filename='dice_data.js') }}">
+    </script>
+    <script 
+      type="text/javascript" 
+      src="static/dice_function.js">
+    </script>
+    
+
+    <!-- Title block to be overridden -->
+    <title>Adrian Lee - Quantum Dice Roller</title>
+  </head>
+
+  <body>
+      <h1>Quantum Dice Roll</h1>
+      <p>Roll dice 2 times.</p>
+      <p>Bonus is 2.</p>
+      <div class="dice_button_row">
+        <button class="dice-button" id="1" onclick="rollDice(this.id, 4)">
+            <span class="dice-text">D4</span>
+            <img class="dice-square" 
+              src="{{url_for('static', filename='assets/d4.png')}}" 
+              alt="d4" >
+        </button>
+        <button class="dice-button" id="2" onclick="rollDice(this.id, 6)">
+          <span class="dice-text">D6</span>
+          <img class="dice-square" 
+              src="{{url_for('static', filename='assets/d6.png')}}" 
+              alt="d6" >
+        </button>
+      </div>
+      <div class="dice_button_row">
+        <button class="dice-button-newline" id="3" onclick="rollDice(this.id, 8)">
+            <span class="dice-text">D8</span>
+            <img class="dice-circle" 
+              src="{{url_for('static', filename='assets/d8.png')}}" 
+              alt="d8" >
+        </button>
+        <button class="dice-button" id="4" onclick="rollDice(this.id, 10)">
+          <span class="dice-text">D10</span>
+          <img class="dice-diamond" 
+              src="{{url_for('static', filename='assets/d10.png')}}" 
+              alt="d10" >
+        </button>
+      </div>
+      <div class="dice_button_row">
+        <button class="dice-button-newline" id="5" onclick="rollDice(this.id, 12)">
+            <span class="dice-text">D12</span>
+            <img class="dice-circle" 
+              src="{{url_for('static', filename='assets/d12.png')}}" 
+              alt="d12" >
+        </button>
+        <button class="dice-button" id="6" onclick="rollDice(this.id, 20)">
+          <span class="dice-text">D20</span>
+          <img class="dice-circle" 
+              src="{{url_for('static', filename='assets/d20.png')}}" 
+              alt="d20" >
+        </button>
+      </div>
+
+    <!-- jQuery CDN - Slim version (=without AJAX) -->
+    <script
+      src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+      integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+      crossorigin="anonymous"
+    ></script>
+    <!-- Bootstrap JS -->
+    <script
+      src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/js/bootstrap.min.js"
+      integrity="sha384-uefMccjFJAIv6A+rW+L4AHf99KvxDjWSu1z9VI8SKNVmz4sk7buKt/6v9KI65qnm"
+      crossorigin="anonymous"
+    ></script>
+    <!-- jQuery Custom Scroller CDN -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/malihu-custom-scrollbar-plugin/3.1.5/jquery.mCustomScrollbar.concat.min.js"></script>
+    
+  </body>
+</html>
