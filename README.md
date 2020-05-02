@@ -1,9 +1,8 @@
 ## About
 This is a (yet another) computer dice roll app that in addition to including dice roll add-ons typical of Dungeons and Dragons aims to provide truly random rolls to the user for a range of dice sizes. True randomness is accomplished to a degree by doing the following:
 
-1. Use remote quantum computers from IBM to generate a sequence of numbers that is ostensibly 'truely random' (This can be briefly assessed by virtue of the fact that knowing the underlying random number generation algorithm does not enable one to predict the sequence of numbers with success)
-2. Cache the sequence of numbers and use it to perform dice rolls, iteratively retrieving numbers and mathematically adjusting the result 
-for different dice sizes.
+1. Using remote quantum computers from IBM to generate a sequence of numbers that is ostensibly 'truely random' (you can do a cursory assessment of this by virtue of the fact that knowing the underlying random number generation algorithm does not enable one to predict the sequence of numbers)
+2. Caching the sequence of numbers and using it to perform dice rolls, iteratively retrieving numbers and mathematically adjusting the result for different dice sizes.
 
 Note: A maximum possible sample size (IBMQ's one-sitting maximum is 8,192 shots of a given analysis at the time of this writing) is used to reduce statistical error and ensure as uniform a frequency distribution of all potential results as possible. The full analysis can be found at the blog post [here](https://www.adrianlee0118.com/blog) (search for the heading "Randomness")
 
