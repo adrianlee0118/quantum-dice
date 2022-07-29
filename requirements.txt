@@ -44,7 +44,7 @@ marshmallow==3.5.1
 marshmallow-polyfield==5.9
 matplotlib==3.2.1
 mccabe==0.6.1
-mistune==0.8.4
+mistune==2.0.3
 more-itertools==8.2.0
 mpmath==1.1.0
 nbconvert==5.6.1
